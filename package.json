@@ -1,0 +1,13 @@
+{
+  "name": "discord-role-manager",
+  "version": "1.0.0",
+  "description": "Simple Discord bot to manage roles",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7"
+  }
+}
