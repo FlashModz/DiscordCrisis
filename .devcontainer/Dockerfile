@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:18
+FROM mcr.microsoft.com/devcontainers/javascript-node:20
 
 # Installation des dépendances système supplémentaires
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -16,11 +16,11 @@ WORKDIR /workspace
 RUN mkdir -p /workspaces/.codespaces/.persistedshare \
     && chown -R node:node /workspaces
 
-# Création des répertoires nécessaires et fichiers de log
-RUN mkdir -p /var/lib/docker/codespacemount/.persistedshare \
-    && touch /var/lib/docker/codespacemount/.persistedshare/vsserverhostlog.txt \
-    && touch /var/lib/docker/codespacemount/.persistedshare/vsserverterminallog.txt \
-    && chown -R node:node /var/lib/docker/codespacemount/.persistedshare
+# Simplified log file setup
+RUN mkdir -p /home/node/.vscode-server/logs \
+    && touch /home/node/.vscode-server/logs/vsserverhostlog.txt \
+    && touch /home/node/.vscode-server/logs/vsserverterminallog.txt \
+    && chown -R node:node /home/node/.vscode-server
 
 # Installation des dépendances globales
 RUN npm install -g npm@latest
