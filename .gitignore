@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Dependencies
+backups/
+mybkkkkp/
+
+# Build output
+dist/
+build/
+
+# Package files
+package-lock.json
+yarn.lock
