@@ -78,6 +78,16 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 Cet outil permet de modifier les permissions administrateur et la structure du serveur. Utilisez-le avec précaution et uniquement si vous en avez l'autorisation.
 
+## 🐛 Issues Connues
+
+Avant d'utiliser l'outil, veuillez consulter nos [issues ouvertes](https://github.com/FlashModz/DiscordCrisis/issues) pour connaître :
+- Les bugs connus actuels
+- Les limitations temporaires
+- Les fonctionnalités en cours de développement
+- Les problèmes de compatibilité
+
+Si vous rencontrez un problème qui n'est pas listé, n'hésitez pas à [ouvrir une nouvelle issue](https://github.com/FlashModz/DiscordCrisis/issues/new).
+
 ## 🤝 Support et Contribution
 
 Pour signaler des bugs ou proposer des améliorations, n'hésitez pas à ouvrir une issue sur GitHub.
