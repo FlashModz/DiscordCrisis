@@ -8,16 +8,20 @@
 
 ## 📋 Fonctionnalités
 
-- 🔒 Verrouillage rapide de tous les canaux
-- 👥 Gestion des rôles en masse
-- 📢 Diffusion de messages d'urgence
-- 🛠️ Interface en ligne de commande intuitive
+- 📊 **Gestion des Rôles**
+  - Liste complète des rôles d'un serveur
+  - Attribution de rôles aux utilisateurs
+  - Promotion rapide d'un rôle en administrateur
+
+- 💾 **Système de Sauvegarde**
+  - Backup complète d'un serveur Discord
+  - Restauration des données sauvegardées
 
 ## 🚀 Installation
 
 1. Clonez le dépôt :
 ```bash
-git clone https://github.com/votre-username/DiscordCrisis.git
+git clone https://github.com/FlashModz/DiscordCrisis.git
 cd DiscordCrisis
 ```
 
@@ -38,16 +42,19 @@ Démarrez l'application :
 node index.js
 ```
 
-Suivez le menu interactif pour :
-- Verrouiller/déverrouiller les canaux
-- Gérer les permissions des rôles
-- Envoyer des messages d'urgence
+Menu interactif disponible :
+1. Lister tous les rôles
+2. Assigner un rôle à un utilisateur
+3. Donner les droits administrateur à un rôle
+4. Sauvegarder le serveur
+5. Restaurer le serveur
+6. Quitter
 
 ## ⚙️ Configuration requise
 
 - Node.js 16.9.0 ou supérieur
-- Un bot Discord avec les permissions appropriées
-- Les intentions Discord suivantes activées :
+- Token de bot Discord
+- Intentions Discord requises :
   - Guilds
   - Guild Members
   - Guild Messages
@@ -69,4 +76,8 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## ⚠️ Avertissement
 
-Cet outil est puissant et doit être utilisé avec précaution. Assurez-vous d'avoir les autorisations nécessaires avant d'utiliser ces fonctionnalités sur un serveur Discord.
+Cet outil permet de modifier les permissions administrateur et la structure du serveur. Utilisez-le avec précaution et uniquement si vous en avez l'autorisation.
+
+## 🤝 Support et Contribution
+
+Pour signaler des bugs ou proposer des améliorations, n'hésitez pas à ouvrir une issue sur GitHub.
