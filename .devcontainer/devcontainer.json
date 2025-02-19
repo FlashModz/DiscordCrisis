@@ -3,7 +3,10 @@
     "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
     "features": {
         "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "moby": true
+        }
     },
     "customizations": {
         "vscode": {
@@ -22,9 +25,10 @@
             }
         }
     },
-    "postCreateCommand": "npm install",
+    "postCreateCommand": "mkdir -p /workspaces/.codespaces/.persistedshare && npm install",
     "remoteUser": "node",
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-    ]
+    ],
+    "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"]
 }
