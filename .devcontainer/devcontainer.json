@@ -25,10 +25,11 @@
             }
         }
     },
-    "postCreateCommand": "mkdir -p ~/.vscode-server/logs && touch ~/.vscode-server/logs/vsserverhostlog.txt ~/.vscode-server/logs/vsserverterminallog.txt && npm install",
+    "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
     "remoteUser": "node",
     "mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+        "type=volume,target=/var/lib/docker/codespacemount/.persistedshare"
     ],
     "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"]
 }
