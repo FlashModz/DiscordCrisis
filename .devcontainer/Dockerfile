@@ -16,6 +16,12 @@ WORKDIR /workspace
 RUN mkdir -p /workspaces/.codespaces/.persistedshare \
     && chown -R node:node /workspaces
 
+# Création des répertoires nécessaires et fichiers de log
+RUN mkdir -p /var/lib/docker/codespacemount/.persistedshare \
+    && touch /var/lib/docker/codespacemount/.persistedshare/vsserverhostlog.txt \
+    && touch /var/lib/docker/codespacemount/.persistedshare/vsserverterminallog.txt \
+    && chown -R node:node /var/lib/docker/codespacemount/.persistedshare
+
 # Installation des dépendances globales
 RUN npm install -g npm@latest
 

@@ -27,8 +27,12 @@
     },
     "postCreateCommand": "mkdir -p /workspaces/.codespaces/.persistedshare && npm install",
     "remoteUser": "node",
+    "initializeCommand": {
+        "createLogs": "mkdir -p ${localWorkspaceFolder}/.devcontainer/logs && touch ${localWorkspaceFolder}/.devcontainer/logs/vsserverhostlog.txt ${localWorkspaceFolder}/.devcontainer/logs/vsserverterminallog.txt"
+    },
     "mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+        "source=${localWorkspaceFolder}/.devcontainer/logs,target=/var/lib/docker/codespacemount/.persistedshare,type=bind"
     ],
     "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"]
 }
