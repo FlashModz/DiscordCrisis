@@ -2,3 +2,18 @@ title: DiscordCrisis
 description: Un outil de gestion de crise pour Discord
 theme: jekyll-theme-minimal
 show_downloads: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+github:
+  is_project_page: true
+  repository_url: "https://github.com/FlashModz/DiscordCrisis"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
